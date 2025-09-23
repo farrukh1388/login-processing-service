@@ -9,3 +9,16 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: update
+
+customer-tracking-service:
+  connect-timeout: 5000
+  connection-request-timeout: 5000
+  read-timeout: 60000
+  username: username #${CTS_USERNAME}
+  password: password #${CTS_PASSWORD}
+  base-uri: https://customer-tracking-service
+  track-logging-path: /api/v1/track-logging/{customerId}
+  retry:
+    maxAttempts: 4
+    delay: 3000
+    multiplier: 2

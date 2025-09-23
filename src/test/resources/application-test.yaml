@@ -1,0 +1,12 @@
+customer-tracking-service:
+  connect-timeout: 5000
+  connection-request-timeout: 5000
+  read-timeout: 60000
+  username: username
+  password: password
+  base-uri: ${wiremock.server.baseUrl}
+  track-logging-path: /api/v1/track-logging/{customerId}
+  retry:
+    maxAttempts: 4
+    delay: 20
+    multiplier: 1
