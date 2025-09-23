@@ -13,3 +13,6 @@ publishes `login-tracking-result` to Kafka and persists the result in a database
 ```bash
   .\mvnw spring-boot:run
 ```
+
+## Improvements
+- Flyway for schema management and DB migrations -> set jpa:hibernate:ddl-auto: none

@@ -3,7 +3,7 @@ package com.tipico.loginprocessing.testcontainers;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 public class PostgresContainer extends PostgreSQLContainer<PostgresContainer> {
-  private static final String IMAGE_VERSION = "postgres:17.0";
+  private static final String IMAGE_VERSION = "postgres:17.5";
   private static PostgresContainer container;
 
   private PostgresContainer() {
