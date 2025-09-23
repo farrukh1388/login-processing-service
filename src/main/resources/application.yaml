@@ -1,3 +1,7 @@
 spring:
   application:
     name: login-processing-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/loginprocessingdb?currentSchema=public
+    username: postgres
+    password: postgres
