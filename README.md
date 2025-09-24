@@ -16,4 +16,4 @@ publishes `login-tracking-result` to Kafka and persists the result in a database
 
 ## Improvements
 - Flyway for schema management and DB migrations -> set jpa:hibernate:ddl-auto: none
-- Replacing @SpringBootTest on CustomerTrackingServiceTests class with more lightweight @RunWith(SpringRunner.class)
+- Replacing @SpringBootTest on CustomerTrackingServiceTests, CustomerLoginListenerTests classes with more lightweight @RunWith(SpringRunner.class)

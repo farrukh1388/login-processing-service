@@ -9,6 +9,26 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: update
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.tipico.loginprocessing.dto
+    consumer:
+      auto-offset-reset: latest
+      group-id: login-processing-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.tipico.loginprocessing.dto
 
 customer-tracking-service:
   connect-timeout: 5000
@@ -22,3 +42,7 @@ customer-tracking-service:
     maxAttempts: 4
     delay: 3000
     multiplier: 2
+
+logging:
+  level:
+    root: INFO
