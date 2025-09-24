@@ -14,6 +14,7 @@ publishes `login-tracking-result` to Kafka and persists the result in a database
   .\mvnw spring-boot:run
 ```
 
-## Improvements
+## Suggestions for improvements
 - Flyway for schema management and DB migrations -> set jpa:hibernate:ddl-auto: none
 - Replacing @SpringBootTest on CustomerTrackingServiceTests, CustomerLoginListenerTests classes with more lightweight @RunWith(SpringRunner.class)
+- Resolve dependencies vulnerabilities using maven dependency management tool
