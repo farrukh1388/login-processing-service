@@ -6,5 +6,5 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LoginTrackingResultRepository extends JpaRepository<LoginTrackingResult, UUID> {
-  Optional<LoginTrackingResult> findByCustomerId(UUID customerId);
+  Optional<LoginTrackingResult> findByMessageId(UUID messageId);
 }

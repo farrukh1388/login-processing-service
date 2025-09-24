@@ -81,7 +81,7 @@ class CustomerLoginIntegrationTests extends PostgresTestContainer {
         .atMost(5, SECONDS)
         .untilAsserted(
             () -> {
-              var optionalResult = repository.findByCustomerId(event.customerId());
+              var optionalResult = repository.findByMessageId(event.messageId());
               assertThat(optionalResult).isPresent();
               var loginTrackingResult = optionalResult.get();
               assertThat(loginTrackingResult)
